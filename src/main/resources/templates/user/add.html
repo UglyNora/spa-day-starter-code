@@ -2,27 +2,38 @@
 <html lang="en" xmlns:th = "http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Select Your Spa Services</title>
     <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title>Sign Up</title>
 </head>
 <body>
-<form method = 'post' action = '/user'>
+<form method = 'post' th:action="@{/user}">
+    <label>
+        Username:
+        <input type = 'text' name = 'username' th:value="${username}">
+    </label>
+     <br>
+    <label>
+        Email:
+        <input type = 'email' name = 'email' th:value="${email}">
+    </label>
+    <br>
 
     <label>
-        Username
-        <input name = 'username' type = 'text'>
-        <label>
-           Email
-            <input name = 'username' type = 'text'>
-        </label>
-      Verify Password
-       <label>
-
-        <input name = 'VerifyPassword' type = 'password'>
-
+        Password:
+        <input type = 'password' name = 'password'>
     </label>
-    <input type = 'submit' value = 'Submit'>
+    <br>
+
+    <label>
+        Verify Password:
+        <input type = 'password' name = 'verifyPassword'>
     </label>
+    <br>
+
+    <p th:text="${error}"></p>
+
+    <input type = 'submit' value = 'Sign Up'>
 </form>
+
 </body>
 </html>

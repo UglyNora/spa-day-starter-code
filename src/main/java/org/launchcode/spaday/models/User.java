@@ -2,23 +2,23 @@ package org.launchcode.spaday.models;
 
 public class User {
 
-    private String userName;
+    private String username;
     private String email;
-    private String passWord;
+    private String password;
 
 
     public User(String userName, String email, String passWord) {
-        this.userName = userName;
+        this.username = username;
         this.email = email;
-        this.passWord = passWord;
+        this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     public String getEmail() {
@@ -29,11 +29,11 @@ public class User {
         this.email = email;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String passWord) {
+        this.password = passWord;
     }
 }
